@@ -1,19 +1,17 @@
 package com.istn.crypto.model;
 
-import java.util.Map;
-
-import org.springframework.web.servlet.function.EntityResponse;
-
 import lombok.*;
+
+import java.util.*;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class APIResponse {
+public class ResponseDecryptSuccess {
     private Boolean success;
     private String message;
-    private EntityResponse<?> value;
+    private Map<String,Object> value;
     
-    @Builder APIResponse(Boolean success, String message, EntityResponse<?> value) {
+    @Builder ResponseDecryptSuccess(Boolean success, String message, Map<String,Object> value) {
         this.success = success;
         this.message = message;
         this.value = value;
